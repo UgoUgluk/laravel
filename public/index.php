@@ -54,4 +54,4 @@ $response = $kernel->handle(
 
 $kernel->terminate($request, $response);
 
-echo 'test';
+echo 'test2';
