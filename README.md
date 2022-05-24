@@ -1,4 +1,4 @@
-#Lavarel для cpanel
+# Lavarel для cpanel
 
 ### Замена public на public_html
 1. ```public``` переименован в ```public_html```
