@@ -18,4 +18,4 @@ jobs:
             cd ${{ secrets.PROJECT_PATH }}
             git pull https://${{ secrets.GIT_TOKEN }}:x-oauth-basic@github.com/UgoUgluk/laravel.git master
             pwd
-            ./.scripts/deploy.sh
+            .scripts/deploy.sh
