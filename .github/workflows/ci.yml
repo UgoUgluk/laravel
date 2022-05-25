@@ -20,5 +20,3 @@ jobs:
           script:  |
             cd ${{ secrets.PROJECT_PATH }}
             git pull https://${{ secrets.GIT_TOKEN }}:x-oauth-basic@github.com/UgoUgluk/laravel.git master
-            composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
-            php artisan migrate
