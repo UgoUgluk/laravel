@@ -17,6 +17,8 @@ use App\Orchid\Screens\User\UserListScreen;
 use App\Orchid\Screens\User\UserProfileScreen;
 use Illuminate\Support\Facades\Route;
 use Tabuna\Breadcrumbs\Trail;
+use App\Orchid\Screens\PostEditScreen;
+use App\Orchid\Screens\PostListScreen;
 
 /*
 |--------------------------------------------------------------------------
@@ -113,3 +115,20 @@ Route::screen('example-cards', ExampleCardsScreen::class)->name('platform.exampl
 Route::screen('example-advanced', ExampleFieldsAdvancedScreen::class)->name('platform.example.advanced');
 
 //Route::screen('idea', Idea::class, 'platform.screens.idea');
+
+//posts
+Route::screen('post/{post?}', PostEditScreen::class)
+    ->name('platform.post.edit')
+    ->breadcrumbs(function (Trail $trail) {
+        return $trail
+            ->parent('platform.post.list')
+            ->push(__('admin.Create post'), route('platform.post.edit'));
+    });
+
+Route::screen('posts', PostListScreen::class)
+    ->name('platform.post.list')
+    ->breadcrumbs(function (Trail $trail) {
+        return $trail
+            ->parent('platform.index')
+            ->push(__('admin.Blog posts'), route('platform.post.list'));
+    });
