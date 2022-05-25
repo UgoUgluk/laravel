@@ -65,7 +65,7 @@ class PostEditScreen extends Screen
                 ->method('createOrUpdate')
                 ->canSee(!$this->post->exists),
 
-            Button::make('Update')
+            Button::make('admin.Update')
                 ->icon('note')
                 ->method('createOrUpdate')
                 ->canSee($this->post->exists),

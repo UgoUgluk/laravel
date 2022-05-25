@@ -33,8 +33,14 @@ class PostListLayout extends Table
                         ->route('platform.post.edit', $post);
                 }),
 
-            TD::make('created_at', __('admin.Created')),
-            TD::make('updated_at', __('admin.Last edit')),
+            TD::make('created_at', __('admin.Created'))
+                ->render(function (Post $post) {
+                    return $post->created_at->format('m/d/Y H:i');
+                }),
+            TD::make('updated_at', __('admin.Last edit'))
+                ->render(function (Post $post) {
+                    return $post->updated_at->format('m/d/Y H:i');
+                })
         ];
     }
 }
