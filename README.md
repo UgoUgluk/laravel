@@ -9,7 +9,7 @@ $this->app->bind('path.public', function() {
   return realpath(base_path().'/../public_html');
 });
 ```
-4. В ```webpack.mix.js``` ```public``` заменен на ```public_html```
+4. В ```webpack.mix.js``` ```public``` заменен на ```public_html``` и прописан ```mix.setPublicPath("public_html/");```
 5. В ```.gitignore``` ```public``` заменен на ```public_html```
 
 ## Автоматический deploy
