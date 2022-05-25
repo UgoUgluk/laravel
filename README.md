@@ -1,4 +1,4 @@
-# Lavarel для cpanel
+# Блог на Lavarel+Orchid для cpanel (c public_html)
 
 ## Замена public на public_html
 1. ```public``` переименован в ```public_html```
